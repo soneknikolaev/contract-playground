@@ -50,9 +50,9 @@ const BaseItem = memo(({ abiItem, onCall }) => {
         } catch ({ message }) {
             setError(message);
             isRead ? setResult('') : setHash('');
-        } finally {
-            setLoading(false);
         }
+
+        setLoading(false);
     }, [abiItem, onCall, isRead]);
 
     const onViewTransaction = useCallback(() => {

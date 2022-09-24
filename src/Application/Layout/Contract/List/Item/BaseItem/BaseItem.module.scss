@@ -1,0 +1,23 @@
+.buttons {
+    .button {
+        color: #fff !important;
+    
+        &:disabled {
+            background-color: #6c757d !important;
+            color: #fff !important;
+            border: 0 !important;
+        }
+
+        &:first-child {
+            margin-right: 10px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.response {
+    margin-bottom: 20px !important;
+}

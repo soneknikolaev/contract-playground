@@ -1,0 +1,35 @@
+.container {
+    height: 100%;
+    background-color: transparent !important;
+
+    .header {
+        background: #222336;
+        padding: 10px;
+    
+        :global(.ant-page-header-heading-title) {
+            margin: 0;
+            color: #fff;
+            font-size: 28px;
+        }
+    }
+
+    .content {
+        display: inline-flex;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100%;
+    }
+}
+
+
+.button {
+    background-color: #007bff !important;
+    color: #fff !important;
+    border: 0 !important;
+    width: 160px;
+
+    &.connected {
+        background-color: #6c757d !important;
+    }
+}

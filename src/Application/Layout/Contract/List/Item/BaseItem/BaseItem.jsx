@@ -21,12 +21,15 @@ const { Item } = Form;
 
 const BaseItem = memo(({ abiItem, onCall }) => {
     const [form] = Form.useForm();
+
     const walletAddress = useSelector(selectEthereumAccount);
     const network = useSelector(selectContractNetwork);
+
     const [result, setResult] = useState('');
     const [hash, setHash] = useState('');
     const [error, setError] = useState('');
     const [isLoading, setLoading] = useState(false);
+
     const isRead = useMemo(() => ABI_TYPES_FILTERS[ABI_TYPES.READ](abiItem), [abiItem]);
 
     const buttonStyles = useMemo(() => {

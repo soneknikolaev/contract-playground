@@ -16,10 +16,6 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-18.04
-    
-    artifacts:
-      paths:
-        - public/
 
     steps:
       - uses: actions/checkout@v2

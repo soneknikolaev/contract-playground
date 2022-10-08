@@ -14,7 +14,7 @@ const { Title, Text } = Typography;
 
 const Outputs = memo(({ outputs }) => {
     if (outputs.length === 0) {
-        return null
+        return null;
     }
 
     return (

@@ -7,7 +7,6 @@ import { store, persistor } from 'Store';
 import Layout from './Layout';
 
 const Application = memo(() => {
-
     return (
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>

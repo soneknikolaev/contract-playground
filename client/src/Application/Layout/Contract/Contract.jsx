@@ -21,7 +21,6 @@ const Contract = memo(({ abi }) => {
         getOnlyAbiByTypes(abi, selectedTypes)
     );
 
-
     const onChange = useCallback((types) => selectTypes(types), []);
 
     useEffect(() => {

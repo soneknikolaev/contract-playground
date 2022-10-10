@@ -26,4 +26,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: server/package-lock.json
-    - run: cd ./server && npm ci && pm2 start ecosystem.config.js
+    - run: cd ./server && npm ci && API_KEY=${{ secrets.API_KEY_ETHERSCAN }} pm2 startOrRestart ecosystem.config.js

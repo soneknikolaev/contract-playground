@@ -8,6 +8,8 @@ const { getAbi } = require('./api');
 
 const app = express();
 
+app.use(cors())
+
 app.get('/getContractAbi', async (req, res) => {
     try {
         const { network, address } = req.query;

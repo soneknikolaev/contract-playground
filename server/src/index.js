@@ -6,24 +6,7 @@ dotenv.config();
 
 const { getAbi } = require('./api');
 
-const { CLIENT_URL } = process.env;
-
 const app = express();
-
-app.use(
-    cors({
-        origin: (origin, callback) => {
-        if (CLIENT_URL.includes(origin)) {
-            return callback(null, true);
-        }
-
-        return callback(
-            new Error('The CORS policy for this site does not allow access from the specified Origin.'),
-            false
-        );
-      },
-    })
-);
 
 app.get('/getContractAbi', async (req, res) => {
     try {
